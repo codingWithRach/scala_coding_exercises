@@ -44,7 +44,7 @@ class Exercise001Test extends AnyFlatSpec {
     assert(exercise001.reverse("why would you even want to do this?") == "?siht od ot tnaw neve uoy dluow yhw")
   }
 
-  "Linux user counting" should "return the correct amount of linux users" ignore {
+  "Linux user counting" should "return the correct amount of linux users" in {
 
     val users = Seq(
       User("Heather", "Windows 10", "Windows"),
@@ -56,12 +56,12 @@ class Exercise001Test extends AnyFlatSpec {
     assert(exercise001.countLinuxUsers(users) == 2)
   }
 
-  it should "return the correct amount of linux users when the collection is empty" ignore {
+  it should "return the correct amount of linux users when the collection is empty" in {
     val users = Seq()
     assert(exercise001.countLinuxUsers(users) == 0)
   }
 
-  it should "return the correct amount of linux users when the collection is not defined" ignore {
+  it should "return the correct amount of linux users when the collection is not defined" in {
     assert(exercise001.countLinuxUsers(null) == 0)
   }
 
