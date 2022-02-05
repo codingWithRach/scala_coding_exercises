@@ -9,7 +9,7 @@ class Exercise001 {
 
   def capitalizeWord(word: String): String = word.substring(0,1).toUpperCase + word.substring(1)
 
-  def generateInitials(firstName: String, lastName: String) = ""
+  def generateInitials(firstName: String, lastName: String): String = firstName.substring(0,1).toUpperCase + "." + lastName.substring(0,1).toUpperCase
 
   def addVat(initialPrice: Double, interestRate: Double) : Double = 0.0
 

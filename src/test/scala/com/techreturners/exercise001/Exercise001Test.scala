@@ -14,11 +14,11 @@ class Exercise001Test extends AnyFlatSpec {
     assert(exercise001.capitalizeWord("the quick fox") == "The quick fox")
   }
 
-  "A string with punctuation" should "only have first letter capitalised" ignore {
+  "A string with punctuation" should "only have first letter capitalised" in {
     assert(exercise001.capitalizeWord("oh no, bears!!!") == "Oh no, bears!!!")
   }
 
-  "A persons name" should "be reduced to initials" ignore {
+  "A persons name" should "be reduced to initials" in {
     assert(exercise001.generateInitials("Frederic", "Bonneville") == "F.B")
     assert(exercise001.generateInitials("Karl", "Marx") == "K.M")
   }
