@@ -23,8 +23,13 @@ class Exercise001 {
    * @return
    */
   def countLinuxUsers(users: Seq[User]): Int = {
-    // Add your code here
-    0
+    var numUsers = 0
+    if (users != null) {
+      for (user <- users) {
+        if (user.osType == "Linux") numUsers += 1
+      }
+    }
+    numUsers
   }
 
 }
