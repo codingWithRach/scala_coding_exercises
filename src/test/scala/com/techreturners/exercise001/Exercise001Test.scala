@@ -39,7 +39,7 @@ class Exercise001Test extends AnyFlatSpec {
     assert(exercise001.addVat(25, 0) == 25)
   }
 
-  "Any given sentence" should "be reversed" ignore {
+  "Any given sentence" should "be reversed" in {
     assert(exercise001.reverse("foo") == "oof")
     assert(exercise001.reverse("why would you even want to do this?") == "?siht od ot tnaw neve uoy dluow yhw")
   }

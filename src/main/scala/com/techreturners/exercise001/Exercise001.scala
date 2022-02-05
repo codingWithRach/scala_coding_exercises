@@ -13,7 +13,7 @@ class Exercise001 {
 
   def addVat(initialPrice: Double, interestRate: Double) : Double = "%.2f".format(initialPrice * (1 + interestRate/100)).toDouble
 
-  def reverse(sentence: String) : String = ""
+  def reverse(sentence: String) : String = sentence.reverse
 
   /**
    * Here we show using a Scala sequence which is a type of collection
