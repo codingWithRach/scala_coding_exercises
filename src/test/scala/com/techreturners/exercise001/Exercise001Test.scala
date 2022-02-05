@@ -23,19 +23,19 @@ class Exercise001Test extends AnyFlatSpec {
     assert(exercise001.generateInitials("Karl", "Marx") == "K.M")
   }
 
-  "VAT rate" should "be added to whole number" ignore {
+  "VAT rate" should "be added to whole number" in {
     assert(exercise001.addVat(100, 20) == 120)
   }
 
-  it should "be allowed to change and still get added" ignore {
+  it should "be allowed to change and still get added" in {
     assert(exercise001.addVat(40, 17.5) == 47)
   }
 
-  it should "be added to decimal numbers" ignore {
+  it should "be added to decimal numbers" in {
     assert(exercise001.addVat(33.5, 17.5) == 39.36)
   }
 
-  it should "not be added when rate is zero" ignore {
+  it should "not be added when rate is zero" in {
     assert(exercise001.addVat(25, 0) == 25)
   }
 

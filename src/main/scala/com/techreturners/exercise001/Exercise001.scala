@@ -11,7 +11,7 @@ class Exercise001 {
 
   def generateInitials(firstName: String, lastName: String): String = firstName.substring(0,1).toUpperCase + "." + lastName.substring(0,1).toUpperCase
 
-  def addVat(initialPrice: Double, interestRate: Double) : Double = 0.0
+  def addVat(initialPrice: Double, interestRate: Double) : Double = "%.2f".format(initialPrice * (1 + interestRate/100)).toDouble
 
   def reverse(sentence: String) : String = ""
 
