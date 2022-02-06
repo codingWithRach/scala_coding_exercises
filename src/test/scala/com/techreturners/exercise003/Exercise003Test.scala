@@ -18,6 +18,14 @@ class Exercise003Test extends AnyFlatSpec {
     assert(exercise003.getIceCreamCode("Salted Caramel") == -1)
   }
 
+  "An empty string" should "not be identified and -1 returned" in {
+    assert(exercise003.getIceCreamCode("") == -1)
+  }
+
+  "A null string" should "not be identified and -1 returned" in {
+    assert(exercise003.getIceCreamCode(null) == -1)
+  }
+
   "All available flavours" should "be correctly returned" in {
 
     val flavours = Array("Pistachio",
