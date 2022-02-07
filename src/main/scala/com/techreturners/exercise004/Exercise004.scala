@@ -7,14 +7,11 @@ class Exercise004(var dateTime: LocalDateTime) {
   // auxiliary constructor
   def this(dateTime: LocalDate) = this(dateTime.atStartOfDay())
 
-  def getDateTimeWithGigaSecond: LocalDateTime = {
+  def getDateTimeWithGigaSecond: Option[LocalDateTime] = {
     try {
-      dateTime.plusSeconds(1000000000)
+      Some(dateTime.plusSeconds(1000000000))
     } catch {
-      // there must be something more appropriate to return for an invalid date/time!
-      case err: DateTimeException =>
-        println("Exception: invalid date/time")
-        LocalDateTime.of(0, 1, 1, 0, 0, 0)
+      case e: Exception => None
     }
   }
 }
